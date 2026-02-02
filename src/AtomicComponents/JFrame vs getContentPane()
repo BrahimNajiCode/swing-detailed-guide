@@ -1,0 +1,23 @@
+Relation entre JFrame et getContentPane()
+
+👉 JFrame est la fenêtre.
+👉 getContentPane() est l’intérieur de la fenêtre.
+
+JFrame ne contient pas directement les composants (boutons, labels, panels…).
+Ils sont placés dans un conteneur interne appelé Content Pane.
+
+JFrame
+ └── ContentPane (Container)  ← getContentPane()
+      ├── JButton
+      ├── JLabel
+      └── JPanel
+getContentPane() ---> Container (cad retourne un objet de type Container)
+il gère aussi le layout (BorderLayout par défaut)
+
+Depuis Java 5+, on peut écrire directement :
+
+    frame.add(new JButton("OK"));
+
+car JFrame.add() délègue automatiquement à getContentPane().
+
+💡 Mais conceptuellement, c’est toujours le content pane qui contient les composants.
