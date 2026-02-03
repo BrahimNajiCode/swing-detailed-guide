@@ -55,6 +55,18 @@ public class ModeleDynamiqueObjet extends AbstractTableModel {
                 return null; //Ne devrait jamais arriver
         }
     }
+    @Override
+    public Class getColumnClass(int columnIndex){
+        switch(columnIndex){
+            case 2:
+                return Color.class;
+            case 3:
+                return Boolean.class;
+            default:
+                return Object.class;
+        }
+    }
+
 
 
     public void addAmi(Ami ami) {

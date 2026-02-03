@@ -14,6 +14,10 @@ public class JTableBasiqueAvecModeleDynamiqueObjet extends JFrame {
         setTitle("JTable avec modèle dynamique");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         tableau = new JTable(modele);
+        tableau.setDefaultRenderer(Boolean.class, new SexeCellRenderer());
+        tableau.setDefaultRenderer(Color.class, new ColorCellRenderer());
+        tableau.getColumnModel().getColumn(1).setCellRenderer(new BoldCellRenderer());
+
 
         getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
         JPanel boutons = new JPanel();
