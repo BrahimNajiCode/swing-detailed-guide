@@ -128,4 +128,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-**Brahim Naji**
+**Author: Brahim Naji**
